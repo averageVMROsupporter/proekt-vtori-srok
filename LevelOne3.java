@@ -147,6 +147,7 @@ public class LevelOne3 extends JFrame {
 						highscore = Integer.parseInt(copy1);
 						copy1 = "";
 					}
+					else copy1 = "";
 				}
 				if (highscore != 0) {
 					System.out.println(highscore);
