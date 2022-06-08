@@ -173,150 +173,150 @@ public class LevelOneFinalVersion extends JFrame {
 		btnUndo.setBounds(21, 182, 158, 28);
 		contentPane.add(btnUndo);
 		
-		JLabel lbl00 = new JLabel("");
-		lbl00.setBounds(250, 20, 32, 32);
-		contentPane.add(lbl00);
-		
-		JLabel lbl01 = new JLabel("");
-		lbl01.setBounds(282, 20, 32, 32);
-		contentPane.add(lbl01);
-		
-		JLabel lbl02 = new JLabel("");
-		lbl02.setBounds(314, 20, 32, 32);
-		contentPane.add(lbl02);
-		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setBounds(346, 20, 32, 32);
-		contentPane.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(378, 20, 32, 32);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setBounds(412, 20, 32, 32);
-		contentPane.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setBounds(250, 52, 32, 32);
-		contentPane.add(lblNewLabel_5);
-		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setBounds(282,  52, 32, 32);
-		contentPane.add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(314,  52, 32, 32);
-		contentPane.add(lblNewLabel_7);
-		
-		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setBounds(346,  52, 32, 32);
-		contentPane.add(lblNewLabel_8);
-		
-		JLabel lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setBounds(378,  52, 32, 32);
-		contentPane.add(lblNewLabel_9);
-		
-		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setBounds(410,  52, 32, 32);
-		contentPane.add(lblNewLabel_10);
-		
-		JLabel lblNewLabel_11 = new JLabel("");
-		lblNewLabel_11.setBounds(250,  84, 32, 32);
-		contentPane.add(lblNewLabel_11);
-		
-		JLabel lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setBounds(282, 84, 32, 32);
-		contentPane.add(lblNewLabel_12);
-		
-		JLabel lblNewLabel_13 = new JLabel("");
-		lblNewLabel_13.setBounds(314, 84, 32, 32);
-		contentPane.add(lblNewLabel_13);
-		
-		JLabel lblNewLabel_14 = new JLabel("");
-		lblNewLabel_14.setBounds(346, 84, 32, 32);
-		contentPane.add(lblNewLabel_14);
-		
-		JLabel lblNewLabel_15 = new JLabel("");
-		lblNewLabel_15.setBounds(378, 84, 32, 32);
-		contentPane.add(lblNewLabel_15);
-		
-		JLabel lblNewLabel_16 = new JLabel("");
-		lblNewLabel_16.setBounds(410, 84, 32, 32);
-		contentPane.add(lblNewLabel_16);
-		
-		JLabel lblNewLabel_17 = new JLabel("");
-		lblNewLabel_17.setBounds(250, 116, 32, 32);
-		contentPane.add(lblNewLabel_17);
-		
-		JLabel lblNewLabel_18 = new JLabel("");
-		lblNewLabel_18.setBounds(282, 116, 32, 32);
-		contentPane.add(lblNewLabel_18);
-		
-		JLabel lblNewLabel_19 = new JLabel("");
-		lblNewLabel_19.setBounds(314, 116, 32, 32);
-		contentPane.add(lblNewLabel_19);
-		
-		JLabel lblNewLabel_20 = new JLabel("");
-		lblNewLabel_20.setBounds(346, 116, 32, 32);
-		contentPane.add(lblNewLabel_20);
-		
-		JLabel lblNewLabel_21 = new JLabel("");
-		lblNewLabel_21.setBounds(378, 116, 32, 32);
-		contentPane.add(lblNewLabel_21);
-		
-		JLabel lblNewLabel_22 = new JLabel("");
-		lblNewLabel_22.setBounds(410, 116, 32, 32);
-		contentPane.add(lblNewLabel_22);
-		
-		JLabel lblNewLabel_23 = new JLabel("");
-		lblNewLabel_23.setBounds(250, 148, 32, 32);
-		contentPane.add(lblNewLabel_23);
-		
-		JLabel lblNewLabel_24 = new JLabel("");
-		lblNewLabel_24.setBounds(282, 148, 32, 32);
-		contentPane.add(lblNewLabel_24);
-		
-		JLabel lblNewLabel_25 = new JLabel("");
-		lblNewLabel_25.setBounds(314, 148, 32, 32);
-		contentPane.add(lblNewLabel_25);
-		
-		JLabel lblNewLabel_26 = new JLabel("");
-		lblNewLabel_26.setBounds(346, 148, 32, 32);
-		contentPane.add(lblNewLabel_26);
-		
-		JLabel lblNewLabel_27 = new JLabel("");
-		lblNewLabel_27.setBounds(378, 148, 32, 32);
-		contentPane.add(lblNewLabel_27);
-		
-		JLabel lblNewLabel_28 = new JLabel("");
-		lblNewLabel_28.setBounds(410, 148, 32, 32);
-		contentPane.add(lblNewLabel_28);
-		
-		JLabel lblNewLabel_29 = new JLabel("");
-		lblNewLabel_29.setBounds(250, 180, 32, 32);
-		contentPane.add(lblNewLabel_29);
-		
-		JLabel lblNewLabel_30 = new JLabel("");
-		lblNewLabel_30.setBounds(282, 180, 32, 32);
-		contentPane.add(lblNewLabel_30);
-		
-		JLabel lblNewLabel_31 = new JLabel("");
-		lblNewLabel_31.setBounds(314, 180, 32, 32);
-		contentPane.add(lblNewLabel_31);
-		
-		JLabel lblNewLabel_32 = new JLabel("");
-		lblNewLabel_32.setBounds(346, 180, 32, 32);
-		contentPane.add(lblNewLabel_32);
-		
-		JLabel lblNewLabel_33 = new JLabel("");
-		lblNewLabel_33.setBounds(378, 180, 32, 32);
-		contentPane.add(lblNewLabel_33);
-		
-		JLabel lblNewLabel_34 = new JLabel("");
-		lblNewLabel_34.setBounds(410, 180, 32, 32);
-		contentPane.add(lblNewLabel_34);
-	
+//		JLabel lbl00 = new JLabel("");
+//		lbl00.setBounds(250, 20, 32, 32);
+//		contentPane.add(lbl00);
+//		
+//		JLabel lbl01 = new JLabel("");
+//		lbl01.setBounds(282, 20, 32, 32);
+//		contentPane.add(lbl01);
+//		
+//		JLabel lbl02 = new JLabel("");
+//		lbl02.setBounds(314, 20, 32, 32);
+//		contentPane.add(lbl02);
+//		
+//		JLabel lbl03 = new JLabel("");
+//		lbl03.setBounds(346, 20, 32, 32);
+//		contentPane.add(lbl03);
+//		
+//		JLabel lbl04 = new JLabel("");
+//		lbl04.setBounds(378, 20, 32, 32);
+//		contentPane.add(lbl04);
+//		
+//		JLabel lblNewLabel_4 = new JLabel("");
+//		lblNewLabel_4.setBounds(412, 20, 32, 32);
+//		contentPane.add(lblNewLabel_4);
+//		
+//		JLabel lblNewLabel_5 = new JLabel("");
+//		lblNewLabel_5.setBounds(250, 52, 32, 32);
+//		contentPane.add(lblNewLabel_5);
+//		
+//		JLabel lblNewLabel_6 = new JLabel("");
+//		lblNewLabel_6.setBounds(282,  52, 32, 32);
+//		contentPane.add(lblNewLabel_6);
+//		
+//		JLabel lblNewLabel_7 = new JLabel("");
+//		lblNewLabel_7.setBounds(314,  52, 32, 32);
+//		contentPane.add(lblNewLabel_7);
+//		
+//		JLabel lblNewLabel_8 = new JLabel("");
+//		lblNewLabel_8.setBounds(346,  52, 32, 32);
+//		contentPane.add(lblNewLabel_8);
+//		
+//		JLabel lblNewLabel_9 = new JLabel("");
+//		lblNewLabel_9.setBounds(378,  52, 32, 32);
+//		contentPane.add(lblNewLabel_9);
+//		
+//		JLabel lblNewLabel_10 = new JLabel("");
+//		lblNewLabel_10.setBounds(410,  52, 32, 32);
+//		contentPane.add(lblNewLabel_10);
+//		
+//		JLabel lblNewLabel_11 = new JLabel("");
+//		lblNewLabel_11.setBounds(250,  84, 32, 32);
+//		contentPane.add(lblNewLabel_11);
+//		
+//		JLabel lblNewLabel_12 = new JLabel("");
+//		lblNewLabel_12.setBounds(282, 84, 32, 32);
+//		contentPane.add(lblNewLabel_12);
+//		
+//		JLabel lblNewLabel_13 = new JLabel("");
+//		lblNewLabel_13.setBounds(314, 84, 32, 32);
+//		contentPane.add(lblNewLabel_13);
+//		
+//		JLabel lblNewLabel_14 = new JLabel("");
+//		lblNewLabel_14.setBounds(346, 84, 32, 32);
+//		contentPane.add(lblNewLabel_14);
+//		
+//		JLabel lblNewLabel_15 = new JLabel("");
+//		lblNewLabel_15.setBounds(378, 84, 32, 32);
+//		contentPane.add(lblNewLabel_15);
+//		
+//		JLabel lblNewLabel_16 = new JLabel("");
+//		lblNewLabel_16.setBounds(410, 84, 32, 32);
+//		contentPane.add(lblNewLabel_16);
+//		
+//		JLabel lblNewLabel_17 = new JLabel("");
+//		lblNewLabel_17.setBounds(250, 116, 32, 32);
+//		contentPane.add(lblNewLabel_17);
+//		
+//		JLabel lblNewLabel_18 = new JLabel("");
+//		lblNewLabel_18.setBounds(282, 116, 32, 32);
+//		contentPane.add(lblNewLabel_18);
+//		
+//		JLabel lblNewLabel_19 = new JLabel("");
+//		lblNewLabel_19.setBounds(314, 116, 32, 32);
+//		contentPane.add(lblNewLabel_19);
+//		
+//		JLabel lblNewLabel_20 = new JLabel("");
+//		lblNewLabel_20.setBounds(346, 116, 32, 32);
+//		contentPane.add(lblNewLabel_20);
+//		
+//		JLabel lblNewLabel_21 = new JLabel("");
+//		lblNewLabel_21.setBounds(378, 116, 32, 32);
+//		contentPane.add(lblNewLabel_21);
+//		
+//		JLabel lblNewLabel_22 = new JLabel("");
+//		lblNewLabel_22.setBounds(410, 116, 32, 32);
+//		contentPane.add(lblNewLabel_22);
+//		
+//		JLabel lblNewLabel_23 = new JLabel("");
+//		lblNewLabel_23.setBounds(250, 148, 32, 32);
+//		contentPane.add(lblNewLabel_23);
+//		
+//		JLabel lblNewLabel_24 = new JLabel("");
+//		lblNewLabel_24.setBounds(282, 148, 32, 32);
+//		contentPane.add(lblNewLabel_24);
+//		
+//		JLabel lblNewLabel_25 = new JLabel("");
+//		lblNewLabel_25.setBounds(314, 148, 32, 32);
+//		contentPane.add(lblNewLabel_25);
+//		
+//		JLabel lblNewLabel_26 = new JLabel("");
+//		lblNewLabel_26.setBounds(346, 148, 32, 32);
+//		contentPane.add(lblNewLabel_26);
+//		
+//		JLabel lblNewLabel_27 = new JLabel("");
+//		lblNewLabel_27.setBounds(378, 148, 32, 32);
+//		contentPane.add(lblNewLabel_27);
+//		
+//		JLabel lblNewLabel_28 = new JLabel("");
+//		lblNewLabel_28.setBounds(410, 148, 32, 32);
+//		contentPane.add(lblNewLabel_28);
+//		
+//		JLabel lblNewLabel_29 = new JLabel("");
+//		lblNewLabel_29.setBounds(250, 180, 32, 32);
+//		contentPane.add(lblNewLabel_29);
+//		
+//		JLabel lblNewLabel_30 = new JLabel("");
+//		lblNewLabel_30.setBounds(282, 180, 32, 32);
+//		contentPane.add(lblNewLabel_30);
+//		
+//		JLabel lblNewLabel_31 = new JLabel("");
+//		lblNewLabel_31.setBounds(314, 180, 32, 32);
+//		contentPane.add(lblNewLabel_31);
+//		
+//		JLabel lblNewLabel_32 = new JLabel("");
+//		lblNewLabel_32.setBounds(346, 180, 32, 32);
+//		contentPane.add(lblNewLabel_32);
+//		
+//		JLabel lblNewLabel_33 = new JLabel("");
+//		lblNewLabel_33.setBounds(378, 180, 32, 32);
+//		contentPane.add(lblNewLabel_33);
+//		
+//		JLabel lblNewLabel_34 = new JLabel("");
+//		lblNewLabel_34.setBounds(410, 180, 32, 32);
+//		contentPane.add(lblNewLabel_34);
+//	
 
 	}
 
@@ -603,7 +603,7 @@ public class LevelOneFinalVersion extends JFrame {
 			}
 		} else {
 			lvlComplete();
-			highscore();
+		//	highscore();
 		}
 	}
 
@@ -635,7 +635,7 @@ public class LevelOneFinalVersion extends JFrame {
 
 	// pokazva finalen ekran kogato nivoto e pobedeno
 	public void lvlComplete() {
-		waiting();
+//		waiting();
 		System.out.println(
 				"========================================================================================================");
 		System.out.println(
@@ -656,23 +656,19 @@ public class LevelOneFinalVersion extends JFrame {
 		System.out.println(
 				"========================================================================================================");
 		System.out.println("in " + moves + " moves");
+		
 	}
 
 	public Icon[][] getIconGrid() {
 		return iconGrid;
 	}
 
-	
-	
-
 	public void setLblGrid() {//new
 		for(int i=0; i<lblGrid.length; i++) {
 			for(int j=0; j<lblGrid[0].length; j++) {
-				lblGrid[i][j]=new JLabel(iconGrid[i][j]);
-				
-			lblGrid[i][j].setBounds(250+i*32, 10+j*32, 32, 32);
-				lblGrid[i][j].setVisible(true);
+				lblGrid[i][j].setBounds(j, j, i, i);
 				getContentPane().add(lblGrid[i][j]);
+			
 			}
 				
 		}
@@ -748,7 +744,7 @@ public class LevelOneFinalVersion extends JFrame {
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[0].length; j++) {
 				grid[i][j] = "  ";
-				iconGrid[i][j] = new ImageIcon(getClass().getResource("pod.png"));//error
+				lblGrid[i][j].setIcon(new ImageIcon(new ImageIcon("pod.png").getImage().getScaledInstance(1, 1, 1)));
 				if (i == geroi / 100) {
 					if (j == geroi % 100) {
 						grid[i][j] = "OO";
@@ -767,7 +763,7 @@ public class LevelOneFinalVersion extends JFrame {
 					if (i == kutiiki[k] / 100) {
 						if (j == kutiiki[k] % 100) {
 							grid[i][j] = "<>";
-							iconGrid[i][j] = new ImageIcon(getClass().getResource("kutiq.png"));//
+							iconGrid[i][j] = new ImageIcon(getClass().getResource("kutiika_varhu_pressure_plate.png"));//
 						}
 					}
 				}
@@ -780,7 +776,6 @@ public class LevelOneFinalVersion extends JFrame {
 							}
 						}
 					}
-
 				}
 			}
 		}
@@ -792,6 +787,8 @@ public class LevelOneFinalVersion extends JFrame {
 				try {
 					LevelOneFinalVersion frame = new LevelOneFinalVersion();
 					frame.setVisible(true);
+					frame.setGrid();
+					if(frame.levelCompletion()) frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
