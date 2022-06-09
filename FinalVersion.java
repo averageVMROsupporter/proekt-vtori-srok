@@ -1,4 +1,4 @@
-package game_app;
+package project2;
 
 import java.util.*;
 import java.awt.BorderLayout;
@@ -27,7 +27,7 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.SystemColor;
 
-public class LevelOneFrame extends JFrame {
+public class LevelOne3 extends JFrame {
 	// poleto na igrata, koeto e dvumeren masiv
 	String[][] grid = new String[6][6];
 	// dolu cheirite sa masivi, koito zapazvat kordinatite na obektite v nivoto,
@@ -69,7 +69,6 @@ public class LevelOneFrame extends JFrame {
 	int brHighscore = 0;
 	private JPanel contentPane;
 	JLabel[][] lblArr = new JLabel[grid.length][grid[0].length];
-	int temp=0;
 	int sus = 0;
 	boolean amogus = true;
 	boolean amongus = true;
@@ -80,7 +79,7 @@ public class LevelOneFrame extends JFrame {
 	private JTextField txtYourMoves;
 	private JTextField textField;
 
-	public LevelOneFrame() {
+	public LevelOne3() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
@@ -156,25 +155,7 @@ public class LevelOneFrame extends JFrame {
 		buttonStart.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(buttonStart);
 
-		Button buttonHighscore = new Button("Show Highscore");
-		buttonHighscore.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				if (giveHighscore() != 0) {
-					System.out.println(giveHighscore ());
-				} else
-					System.out.println("No one has beaten the level yet");
-				Iterator it = list.iterator();
-				while (it.hasNext()) {
-					System.out.println(it.next().toString());
-					
-				}
-				
-			}
-		});
-		buttonHighscore.setBounds(207, 430, 149, 21);
-		contentPane.add(buttonHighscore);
-
+		// restart
 		JButton btnRestart = new JButton("Restart");
 		btnRestart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -185,10 +166,11 @@ public class LevelOneFrame extends JFrame {
 		btnRestart.setBounds(21, 22, 155, 28);
 		contentPane.add(btnRestart);
 
+		// undo
 		JButton btnUndo = new JButton("Undo");
 		btnUndo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (moves!=0) {
+				if (moves != 0) {
 					setMovement("z");
 					moves--;
 					moves--;
@@ -201,14 +183,16 @@ public class LevelOneFrame extends JFrame {
 		});
 		btnUndo.setBounds(21, 183, 158, 28);
 		contentPane.add(btnUndo);
-		
+
+		// move counter
 		txtYourMoves = new JTextField();
 		txtYourMoves.setBackground(SystemColor.controlHighlight);
 		txtYourMoves.setText("Your Moves: ");
 		txtYourMoves.setBounds(21, 234, 158, 34);
 		contentPane.add(txtYourMoves);
 		txtYourMoves.setColumns(10);
-		
+
+		// shows highscore
 		textField = new JTextField();
 		textField.setText("Highscore: ");
 		textField.setColumns(10);
@@ -225,8 +209,9 @@ public class LevelOneFrame extends JFrame {
 			Thread.currentThread().interrupt();
 		}
 	}
-	
-	public int giveHighscore () {
+
+	// dava highscore
+	public int giveHighscore() {
 		Iterator it1 = list.iterator();
 		int br1 = 0;
 		String copy1 = "";
@@ -247,7 +232,7 @@ public class LevelOneFrame extends JFrame {
 		}
 		return highscore1;
 	}
-	
+
 	// marda kordinatite na geroq pri saotvetniqt buton
 	public void normalCharacterMovement(int geroi, int geroidefault, int[] kutiikidefault) {
 		switch (movement) {
@@ -273,7 +258,7 @@ public class LevelOneFrame extends JFrame {
 			}
 			geroi = geroidefault;
 			this.geroi = geroi;
-			this.moves=-1;
+			this.moves = -1;
 			break;
 		case "z":
 			undo();
@@ -497,14 +482,9 @@ public class LevelOneFrame extends JFrame {
 		br = 1;
 	}
 
+	// runva vsichki metodi, koito interactvat s jframe-a
 	public void play() {
 		showHighscore();
-		if(temp==0) {
-			geroidefault=geroi;
-		
-			temp++;
-		}
-		
 		if (!levelCompletion()) {
 			if (br < 1)
 				setKutiikiDefault();
@@ -527,23 +507,23 @@ public class LevelOneFrame extends JFrame {
 				printGrid();
 				setMovement("");
 			}
-		} 
-		else {
+		} else {
 			lvlComplete();
 			setHighscore(file);
-			highscoreText=0;
+			highscoreText = 0;
 			showHighscore();
 		}
 	}
-	
+
+	// pokazva highscorea v jframe-a
 	public void showHighscore() {
 		if (highscoreText == 0) {
 			textField.setText("Highscore: " + giveHighscore());
-			highscoreText=1;
+			highscoreText = 1;
 		}
 	}
 
-	// zapazva imeto i score na vseki igrach minal nivoto v file
+	// zapazva scorea na vseki igrach minal nivoto v file
 	public void setHighscore(File file) {
 
 		PrintWriter fw = null;
@@ -670,11 +650,10 @@ public class LevelOneFrame extends JFrame {
 
 	// aktualizira grida s kordinatite na obektite v nego
 	public void setGrid() {
-
 		if (sus == 0) {
 			for (int i = 0; i < grid.length; i++) {
 				for (int j = 0; j < grid[0].length; j++) {
-					lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("geroi.png")));
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
 					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 					getContentPane().add(lblArr[i][j]);
 				}
@@ -687,7 +666,7 @@ public class LevelOneFrame extends JFrame {
 
 				lblArr[i][j].setVisible(false);
 
-				lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("pod.png")));
+				lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pod.png")));
 				lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 				getContentPane().add(lblArr[i][j]);
 				lblArr[i][j].setVisible(true);
@@ -695,7 +674,7 @@ public class LevelOneFrame extends JFrame {
 				if (i == geroi / 100 && j == geroi % 100) {
 					grid[i][j] = "OO";
 					lblArr[i][j].setVisible(false);
-					lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("geroi.png")));
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
 					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 					getContentPane().add(lblArr[i][j]);
 					lblArr[i][j].setVisible(true);
@@ -706,7 +685,7 @@ public class LevelOneFrame extends JFrame {
 						grid[i][j] = "__";
 						if (amogus) {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("pressure plate.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pressure plate.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -719,14 +698,14 @@ public class LevelOneFrame extends JFrame {
 						grid[i][j] = "<>";
 						if (amongus) {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("kutiq.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("kutiq.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
 						} else {
 							lblArr[i][j].setVisible(false);
 							lblArr[i][j] = new JLabel(
-									new ImageIcon(LevelOneFrame.class.getResource("kutiika varhu pressure plate.png")));
+									new ImageIcon(LevelOne3.class.getResource("kutiika varhu pressure plate.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -739,7 +718,7 @@ public class LevelOneFrame extends JFrame {
 						if (i == steni[k] / 100 && j == steni[k] % 100) {
 							grid[i][j] = "[]";
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("stena.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("stena.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -749,8 +728,6 @@ public class LevelOneFrame extends JFrame {
 			}
 		}
 	}
-//	for (int m = 0; m < grid.length; m++) {
-//		for (int n = 0; n < grid[0].length; n++) {
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -764,7 +741,7 @@ public class LevelOneFrame extends JFrame {
 						list.add(s);
 					}
 					fr.close();
-					LevelOneFrame frame = new LevelOneFrame();
+					LevelOne3 frame = new LevelOne3();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
