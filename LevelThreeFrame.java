@@ -1,4 +1,5 @@
-package game_app;
+package project2;
+
 import java.util.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -61,7 +62,6 @@ public class LevelThreeFrame extends LevelOneFrame {
 	int sus = 0;
 	boolean amogus = true;
 	boolean amongus = true;
-	static File file = new File("highscore1.txt");
 	static LinkedList<String> list = new LinkedList<>();
 	Scanner sc = new Scanner(System.in);
 
@@ -194,12 +194,11 @@ public class LevelThreeFrame extends LevelOneFrame {
 		int[]winCon= {704, 705, 706, 707, 708};
 		int steni[]= {3,4,5,6,7, 101,100,102,103,107, 200,203,207,208,209,210, 300,310, 400,404,408,410, 501,500,502,504,508,510, 601,604,605,606,607,608,610, 701,710, 801,802,803,804,805,806,807,808,809,810};
 		String[][] grid=new String[9][11];
-
+		
 		super.setGeroi(geroi);
 		super.setGrid(grid);
 		super.setKutiiki(kutiiki);
 		super.setWinCon(winCon);
-		
 		super.setSteni(steni);
 	}
 	public static void main(String[] args) {
