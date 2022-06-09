@@ -1,4 +1,4 @@
-package project2;
+package game_app;
 
 import java.util.*;
 import java.awt.BorderLayout;
@@ -27,7 +27,7 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.SystemColor;
 
-public class LevelOne3 extends JFrame {
+public class LevelOneFrame extends JFrame {
 	// poleto na igrata, koeto e dvumeren masiv
 	String[][] grid = new String[6][6];
 	// dolu cheirite sa masivi, koito zapazvat kordinatite na obektite v nivoto,
@@ -69,6 +69,7 @@ public class LevelOne3 extends JFrame {
 	int brHighscore = 0;
 	private JPanel contentPane;
 	JLabel[][] lblArr = new JLabel[grid.length][grid[0].length];
+	int temp=0;
 	int sus = 0;
 	boolean amogus = true;
 	boolean amongus = true;
@@ -79,7 +80,7 @@ public class LevelOne3 extends JFrame {
 	private JTextField txtYourMoves;
 	private JTextField textField;
 
-	public LevelOne3() {
+	public LevelOneFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
@@ -498,6 +499,12 @@ public class LevelOne3 extends JFrame {
 
 	public void play() {
 		showHighscore();
+		if(temp==0) {
+			geroidefault=geroi;
+		
+			temp++;
+		}
+		
 		if (!levelCompletion()) {
 			if (br < 1)
 				setKutiikiDefault();
@@ -667,7 +674,7 @@ public class LevelOne3 extends JFrame {
 		if (sus == 0) {
 			for (int i = 0; i < grid.length; i++) {
 				for (int j = 0; j < grid[0].length; j++) {
-					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("geroi.png")));
 					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 					getContentPane().add(lblArr[i][j]);
 				}
@@ -680,7 +687,7 @@ public class LevelOne3 extends JFrame {
 
 				lblArr[i][j].setVisible(false);
 
-				lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pod.png")));
+				lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("pod.png")));
 				lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 				getContentPane().add(lblArr[i][j]);
 				lblArr[i][j].setVisible(true);
@@ -688,7 +695,7 @@ public class LevelOne3 extends JFrame {
 				if (i == geroi / 100 && j == geroi % 100) {
 					grid[i][j] = "OO";
 					lblArr[i][j].setVisible(false);
-					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("geroi.png")));
 					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 					getContentPane().add(lblArr[i][j]);
 					lblArr[i][j].setVisible(true);
@@ -699,7 +706,7 @@ public class LevelOne3 extends JFrame {
 						grid[i][j] = "__";
 						if (amogus) {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pressure plate.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("pressure plate.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -712,14 +719,14 @@ public class LevelOne3 extends JFrame {
 						grid[i][j] = "<>";
 						if (amongus) {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("kutiq.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("kutiq.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
 						} else {
 							lblArr[i][j].setVisible(false);
 							lblArr[i][j] = new JLabel(
-									new ImageIcon(LevelOne3.class.getResource("kutiika varhu pressure plate.png")));
+									new ImageIcon(LevelOneFrame.class.getResource("kutiika varhu pressure plate.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -732,7 +739,7 @@ public class LevelOne3 extends JFrame {
 						if (i == steni[k] / 100 && j == steni[k] % 100) {
 							grid[i][j] = "[]";
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("stena.png")));
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOneFrame.class.getResource("stena.png")));
 							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							getContentPane().add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
@@ -757,7 +764,7 @@ public class LevelOne3 extends JFrame {
 						list.add(s);
 					}
 					fr.close();
-					LevelOne3 frame = new LevelOne3();
+					LevelOneFrame frame = new LevelOneFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
