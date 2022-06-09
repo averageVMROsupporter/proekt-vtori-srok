@@ -28,7 +28,7 @@ public class LevelOne3 extends JFrame {
 	String[][] grid = new String[6][6];
 	// dolu cheirite sa masivi, koito zapazvat kordinatite na obektite v nivoto,
 	// kato parviqt im kordinat e chisloto deleno na 100, a vtoriq ostataka mu pri
-	// delenie na 100
+//	 delenie na 100
 	int kutiiki[] = { 404 };
 	int winCon[] = { 300 };
 	int geroi = 305;
@@ -675,9 +675,8 @@ public class LevelOne3 extends JFrame {
 							lblArr[i][j].setVisible(true);
 						}
 					}
-					amongus = true;
-
 				}
+				amongus = true;
 				for (int k = 0; k < steni.length; k++) {
 					if (steni[0] != 0)
 						if (i == steni[k] / 100 && j == steni[k] % 100) {
