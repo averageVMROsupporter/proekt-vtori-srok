@@ -191,11 +191,15 @@ public class LevelOne3 extends JFrame {
 		JButton btnUndo = new JButton("Undo");
 		btnUndo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setMovement("z");
-				setGrid();
-				printLevel();
-				printGrid();
-				play();
+				if (moves!=0) {
+					setMovement("z");
+					setGrid();
+					printLevel();
+					printGrid();
+					play();
+					moves--;
+					moves--;
+				}
 			}
 		});
 		btnUndo.setBounds(21, 183, 158, 28);
