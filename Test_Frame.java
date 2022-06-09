@@ -33,6 +33,20 @@ public class LevelOne3 extends JFrame {
 	int winCon[] = { 300 };
 	int geroi = 305;
 	int steni[] = { 0 };
+
+//	int geroi = 401;
+//	int[]kutiiki= {302, 303, 204, 405, 407};
+//	int[]winCon= {704, 705, 706, 707, 708};
+//	int steni[]= {3,4,5,6,7, 101,100,102,103,107, 200,203,207,208,209,210, 300,310, 400,404,408,410, 501,500,502,504,508,510, 601,604,605,606,607,608,610, 701,710, 801,802,803,804,805,806,807,808,809,810};
+//	String[][] grid=new String[9][11];
+
+//	int geroi = 404;
+//	int[] kutiiki = { 303, 403, 305, 504 };
+//	int[] winCon = { 103, 401, 306, 604 };
+//	int steni[] = { 2, 3, 4, 102, 104, 202, 204, 205, 206, 207, 301, 300, 302, 307, 400, 405, 406, 407, 501,
+//			500, 502, 503, 505, 603, 605, 703, 704, 705 };
+//	String[][] grid = new String[8][8];
+
 	// promenlivi za zapisvaneto na imeto na igracha i hodovete za koito e minal
 	// nivoto
 	int highscore = 0;
@@ -49,14 +63,13 @@ public class LevelOne3 extends JFrame {
 	boolean counterBug = true;
 	int brHighscore = 0;
 	private JPanel contentPane;
-	JLabel[][] lblArr= new JLabel[grid.length][grid[0].length];
-	int sus=0;
+	JLabel[][] lblArr = new JLabel[grid.length][grid[0].length];
+	int sus = 0;
 	boolean amogus = true;
 	boolean amongus = true;
 	static File file = new File("highscore.txt");
 	static LinkedList<String> list = new LinkedList<>();
 	Scanner sc = new Scanner(System.in);
-	
 
 	public LevelOne3() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -153,8 +166,8 @@ public class LevelOne3 extends JFrame {
 					} else if (Integer.parseInt(copy1) < highscore) {
 						highscore = Integer.parseInt(copy1);
 						copy1 = "";
-					}
-					else copy1 = "";
+					} else
+						copy1 = "";
 				}
 				if (highscore != 0) {
 					System.out.println(highscore);
@@ -189,7 +202,6 @@ public class LevelOne3 extends JFrame {
 		contentPane.add(btnUndo);
 	}
 
-		
 	// izchakva
 	public static void waiting() {
 		try {
@@ -477,11 +489,11 @@ public class LevelOne3 extends JFrame {
 
 	// zapazva imeto i score na vseki igrach minal nivoto v file
 	public void highscore(File file) {
-		
+
 		PrintWriter fw = null;
 		try {
 			fw = new PrintWriter(file);
-			if (brHighscore!=1) {
+			if (brHighscore != 1) {
 				if (!list.isEmpty()) {
 					Iterator it = list.iterator();
 					while (it.hasNext()) {
@@ -601,83 +613,83 @@ public class LevelOne3 extends JFrame {
 
 	// aktualizira grida s kordinatite na obektite v nego
 	public void setGrid() {
-		
-		if (sus==0) {
+
+		if (sus == 0) {
 			for (int i = 0; i < grid.length; i++) {
 				for (int j = 0; j < grid[0].length; j++) {
-						lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
-						lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
-						add(lblArr[i][j]);
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
+					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
+					add(lblArr[i][j]);
 				}
 			}
-			sus=1;
+			sus = 1;
 		}
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[0].length; j++) {
 				grid[i][j] = "  ";
 
-						lblArr[i][j].setVisible(false);
+				lblArr[i][j].setVisible(false);
 
-				lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("pod.png")));
-				lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
+				lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pod.png")));
+				lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 				add(lblArr[i][j]);
 				lblArr[i][j].setVisible(true);
-				
+
 				if (i == geroi / 100 && j == geroi % 100) {
-					grid[i][j] = "OO";						
+					grid[i][j] = "OO";
 					lblArr[i][j].setVisible(false);
-					lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
-					lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
+					lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("geroi.png")));
+					lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 					add(lblArr[i][j]);
 					lblArr[i][j].setVisible(true);
-					amogus=false;
+					amogus = false;
 				}
 				for (int k = 0; k < winCon.length; k++) {
 					if (i == winCon[k] / 100 && j == winCon[k] % 100) {
 						grid[i][j] = "__";
 						if (amogus) {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("pressure plate.png")));
-							lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("pressure plate.png")));
+							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
 						}
-						amongus=false;
+						amongus = false;
 					}
 				}
 				for (int k = 0; k < winCon.length; k++) {
 					if (i == kutiiki[k] / 100 && j == kutiiki[k] % 100) {
 						grid[i][j] = "<>";
 						if (amongus) {
-						lblArr[i][j].setVisible(false);
-						lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("kutiq.png")));
-						lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
-						add(lblArr[i][j]);
-						lblArr[i][j].setVisible(true);
-						}
-						else {
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("kutiika varhu pressure plate.png")));
-							lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("kutiq.png")));
+							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
+							add(lblArr[i][j]);
+							lblArr[i][j].setVisible(true);
+						} else {
+							lblArr[i][j].setVisible(false);
+							lblArr[i][j] = new JLabel(
+									new ImageIcon(LevelOne3.class.getResource("kutiika varhu pressure plate.png")));
+							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
 						}
 					}
-					amongus=true;
-					
-					}
+					amongus = true;
+
+				}
 				for (int k = 0; k < steni.length; k++) {
 					if (steni[0] != 0)
 						if (i == steni[k] / 100 && j == steni[k] % 100) {
 							grid[i][j] = "[]";
 							lblArr[i][j].setVisible(false);
-							lblArr[i][j]= new JLabel(new ImageIcon(LevelOne3.class.getResource("stena.png")));
-							lblArr[i][j].setBounds(300 +j*32,100+i*32, 32,32);
+							lblArr[i][j] = new JLabel(new ImageIcon(LevelOne3.class.getResource("stena.png")));
+							lblArr[i][j].setBounds(300 + j * 32, 100 + i * 32, 32, 32);
 							add(lblArr[i][j]);
 							lblArr[i][j].setVisible(true);
-					}
+						}
 				}
-				amogus=true;
+				amogus = true;
 			}
 		}
 	}
@@ -689,13 +701,13 @@ public class LevelOne3 extends JFrame {
 			public void run() {
 				try {
 					file.createNewFile();
-					FileReader fr= new FileReader(file);
-					int asfddsaf;    
-			          while((asfddsaf=fr.read())!=-1) {   
-			        	  String s = "" + (char)asfddsaf;
-			        	  list.add(s);    
-			          }
-			          fr.close();    
+					FileReader fr = new FileReader(file);
+					int asfddsaf;
+					while ((asfddsaf = fr.read()) != -1) {
+						String s = "" + (char) asfddsaf;
+						list.add(s);
+					}
+					fr.close();
 					LevelOne3 frame = new LevelOne3();
 					frame.setVisible(true);
 				} catch (Exception e) {
