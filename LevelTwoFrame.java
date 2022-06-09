@@ -1,4 +1,5 @@
-package game_app;
+package project2;
+
 import java.util.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -24,7 +25,7 @@ import java.awt.Button;
 
 public class LevelTwoFrame extends LevelOneFrame {
 	// poleto na igrata, koeto e dvumeren masiv
-	String[][] grid = new String[9][11];
+	String[][] grid = new String[8][8];
 	// dolu cheirite sa masivi, koito zapazvat kordinatite na obektite v nivoto,
 	// kato parviqt im kordinat e chisloto deleno na 100, a vtoriq ostataka mu pri
 //	 delenie na 100
@@ -56,7 +57,7 @@ public class LevelTwoFrame extends LevelOneFrame {
 	int sus = 0;
 	boolean amogus = true;
 	boolean amongus = true;
-	static File file = new File("highscore1.txt");
+	static File file = new File("highscore2.txt");
 	static LinkedList<String> list = new LinkedList<>();
 	Scanner sc = new Scanner(System.in);
 
