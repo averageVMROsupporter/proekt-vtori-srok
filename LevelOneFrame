@@ -1,4 +1,4 @@
-package game_app;
+package project2;
 
 import java.util.*;
 import java.awt.BorderLayout;
@@ -74,7 +74,7 @@ public class LevelOneFrame extends JFrame {
 	boolean amogus = true;
 	boolean amongus = true;
 	static int highscoreText = 0;
-	static File file = new File("highscore.txt");
+	static File file = new File("highscore1.txt");
 	static LinkedList<String> list = new LinkedList<>();
 	Scanner sc = new Scanner(System.in);
 	private JTextField txtYourMoves;
@@ -156,25 +156,7 @@ public class LevelOneFrame extends JFrame {
 		buttonStart.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(buttonStart);
 
-		Button buttonHighscore = new Button("Show Highscore");
-		buttonHighscore.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				if (giveHighscore() != 0) {
-					System.out.println(giveHighscore ());
-				} else
-					System.out.println("No one has beaten the level yet");
-				Iterator it = list.iterator();
-				while (it.hasNext()) {
-					System.out.println(it.next().toString());
-					
-				}
-				
-			}
-		});
-		buttonHighscore.setBounds(207, 430, 149, 21);
-		contentPane.add(buttonHighscore);
-
+		// restart
 		JButton btnRestart = new JButton("Restart");
 		btnRestart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -185,10 +167,11 @@ public class LevelOneFrame extends JFrame {
 		btnRestart.setBounds(21, 22, 155, 28);
 		contentPane.add(btnRestart);
 
+		// undo
 		JButton btnUndo = new JButton("Undo");
 		btnUndo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (moves!=0) {
+				if (moves != 0) {
 					setMovement("z");
 					moves--;
 					moves--;
@@ -201,14 +184,16 @@ public class LevelOneFrame extends JFrame {
 		});
 		btnUndo.setBounds(21, 183, 158, 28);
 		contentPane.add(btnUndo);
-		
+
+		// move counter
 		txtYourMoves = new JTextField();
 		txtYourMoves.setBackground(SystemColor.controlHighlight);
 		txtYourMoves.setText("Your Moves: ");
 		txtYourMoves.setBounds(21, 234, 158, 34);
 		contentPane.add(txtYourMoves);
 		txtYourMoves.setColumns(10);
-		
+
+		// shows highscore
 		textField = new JTextField();
 		textField.setText("Highscore: ");
 		textField.setColumns(10);
@@ -225,8 +210,9 @@ public class LevelOneFrame extends JFrame {
 			Thread.currentThread().interrupt();
 		}
 	}
-	
-	public int giveHighscore () {
+
+	// dava highscore
+	public int giveHighscore(File file) {
 		Iterator it1 = list.iterator();
 		int br1 = 0;
 		String copy1 = "";
@@ -247,7 +233,7 @@ public class LevelOneFrame extends JFrame {
 		}
 		return highscore1;
 	}
-	
+
 	// marda kordinatite na geroq pri saotvetniqt buton
 	public void normalCharacterMovement(int geroi, int geroidefault, int[] kutiikidefault) {
 		switch (movement) {
@@ -273,7 +259,7 @@ public class LevelOneFrame extends JFrame {
 			}
 			geroi = geroidefault;
 			this.geroi = geroi;
-			this.moves=-1;
+			this.moves = -1;
 			break;
 		case "z":
 			undo();
@@ -497,14 +483,14 @@ public class LevelOneFrame extends JFrame {
 		br = 1;
 	}
 
+	// runva vsichki metodi, koito interactvat s jframe-a
 	public void play() {
-		showHighscore();
+		showHighscore(file);
 		if(temp==0) {
 			geroidefault=geroi;
 		
 			temp++;
 		}
-		
 		if (!levelCompletion()) {
 			if (br < 1)
 				setKutiikiDefault();
@@ -527,23 +513,23 @@ public class LevelOneFrame extends JFrame {
 				printGrid();
 				setMovement("");
 			}
-		} 
-		else {
+		} else {
 			lvlComplete();
 			setHighscore(file);
-			highscoreText=0;
-			showHighscore();
-		}
-	}
-	
-	public void showHighscore() {
-		if (highscoreText == 0) {
-			textField.setText("Highscore: " + giveHighscore());
-			highscoreText=1;
+			highscoreText = 0;
+			showHighscore(file);
 		}
 	}
 
-	// zapazva imeto i score na vseki igrach minal nivoto v file
+	// pokazva highscorea v jframe-a
+	public void showHighscore(File file) {
+		if (highscoreText == 0) {
+			textField.setText("Highscore: " + giveHighscore(file));
+			highscoreText = 1;
+		}
+	}
+
+	// zapazva scorea na vseki igrach minal nivoto v file
 	public void setHighscore(File file) {
 
 		PrintWriter fw = null;
@@ -670,7 +656,6 @@ public class LevelOneFrame extends JFrame {
 
 	// aktualizira grida s kordinatite na obektite v nego
 	public void setGrid() {
-
 		if (sus == 0) {
 			for (int i = 0; i < grid.length; i++) {
 				for (int j = 0; j < grid[0].length; j++) {
@@ -749,8 +734,6 @@ public class LevelOneFrame extends JFrame {
 			}
 		}
 	}
-//	for (int m = 0; m < grid.length; m++) {
-//		for (int n = 0; n < grid[0].length; n++) {
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
