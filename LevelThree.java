@@ -22,7 +22,7 @@ import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
 import java.awt.Button;
 
-public class LevelTwoFrame extends LevelOneFrame {
+public class LevelThreeFrame extends LevelOneFrame {
 	// poleto na igrata, koeto e dvumeren masiv
 	String[][] grid = new String[9][11];
 	// dolu cheirite sa masivi, koito zapazvat kordinatite na obektite v nivoto,
@@ -65,7 +65,7 @@ public class LevelTwoFrame extends LevelOneFrame {
 	static LinkedList<String> list = new LinkedList<>();
 	Scanner sc = new Scanner(System.in);
 
-	public LevelTwoFrame() {
+	public LevelThreeFrame() {
 		super();
 		levelSetup();
 	}
@@ -214,7 +214,7 @@ public class LevelTwoFrame extends LevelOneFrame {
 						list.add(s);
 					}
 					fr.close();
-					LevelTwoFrame frame = new LevelTwoFrame();
+					LevelThreeFrame frame = new LevelThreeFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
